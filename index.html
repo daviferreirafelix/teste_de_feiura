@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <h1>Você é idiota??</h1>
+      <h1>Você é feio??</h1>
     </header>
     <main>
       <section>
@@ -36,13 +36,15 @@
         console.log("evento funcional");
       };
 
-      function euSabia() {
+      const funcaoEuSabia = function euSabia() {
         validadorH1 === true
           ? (titulo.textContent = "Eu sabia!")
           : (titulo.textContent = "Você é idiota??");
 
         validadorH1 = !validadorH1;
-      }
+      };
+
+      botaoSim.addEventListener("click", funcaoEuSabia);
 
       botaoNao.addEventListener("mouseenter", funcaoEvento);
 
