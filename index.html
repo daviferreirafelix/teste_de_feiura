@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Você é idiota??</h1>
+    </header>
+    <main>
+      <section>
+        <div id="btSim">
+          <input type="button" id="sim" value="Sim" onclick="euSabia()" />
+        </div>
+        <div id="btNao">
+          <input type="button" id="nao" value="Não" />
+        </div>
+      </section>
+    </main>
+    <script>
+      const botaoSim = document.querySelector("#sim");
+      const botaoNao = document.querySelector("#nao");
+      const titulo = document.querySelector("h1");
+      let validadorH1 = true;
+
+      const funcaoEvento = function () {
+        botaoNao.style.position = "absolute";
+        botaoNao.style.marginLeft = `${Math.random() * 200}px`;
+        botaoNao.style.marginRight = `${Math.random() * 200}px`;
+        botaoNao.style.marginTop = `${Math.random() * 200}px`;
+        botaoNao.style.marginBottom = `${Math.random() * 200}px`;
+        console.log("evento funcional");
+      };
+
+      function euSabia() {
+        validadorH1 === true
+          ? (titulo.textContent = "Eu sabia!")
+          : (titulo.textContent = "Você é idiota??");
+
+        validadorH1 = !validadorH1;
+      }
+
+      botaoNao.addEventListener("mouseenter", funcaoEvento);
+
+      botaoNao.addEventListener("mousemove", funcaoEvento);
+
+      botaoNao.addEventListener("mouseover", funcaoEvento);
+
+      botaoNao.addEventListener("mouseup", funcaoEvento);
+
+      botaoNao.addEventListener("click", funcaoEvento);
+    </script>
+  </body>
+</html>
